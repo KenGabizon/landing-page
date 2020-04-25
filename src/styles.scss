@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-//@import "styles/variables";
-//@import "styles/zi-colors";
+@import "styles/colors";
+@import "styles/variables";
+@import "styles/fonts";
 //@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 
@@ -12,9 +13,9 @@ html, body {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
-  color: #333333;
+  @include font-style;
+  //color: #333333;
+  //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,10 +34,10 @@ p {
   margin: 0;
 }
 
-:focus {
-  outline: none;
-}
-
 .pointer {
   cursor: pointer;
+}
+
+:focus {
+  outline: none;
 }
