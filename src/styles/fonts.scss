@@ -1,0 +1,70 @@
+@import "colors";
+@import "variables";
+
+/// Represents default font-face in the system
+$font-family: sans-serif;
+
+// Represents an extra small size of a font in the system
+$font-xSmall: 11px;
+
+/// Represents a small size of a font in the system
+$font-small: 12px;
+
+/// Represents default color of texts in the system
+$font-base: 13px;
+
+/// Represents a large size of a font in the system
+$font-large: 14px;
+
+/// Represents a extra large size of a font in the system
+$font-xlarge: 15px;
+
+/// Represents a extra extra large size of a font in the system
+$font-xxLarge: 16px;
+
+//Represents a extra extra extra large size of a font in the system
+$font-3xlarge:18px;
+
+/// Represents a super extra extra extra large size of a font in the system
+$font-4xlarge: 20px;
+
+/// Represents a super extra extra extra large size of a font in the system
+$font-5xlarge: 22px;
+
+/// Represents a super extra extra extra large size of a font in the system
+$font-6xlarge: 25px;
+
+/// Represents a super extra extra extra large size of a font in the system
+$font-8xlarge-onb: 30px;
+
+/// Represents the thin font weight in the system
+$font-weight-thin: 300 !default;
+
+/// Represents the normal font weight in the system
+$font-weight-base: $font-weight-thin !default;
+
+/// Represents the norm font weight in the system
+$font-weight-normal: 400 !default;
+
+//Represent medium font weight in the system
+$font-weight-medium: 500 !default;
+
+/// Represents the semi font weight in the system
+$font-weight-semi-bold: 600 !default;
+
+/// Represents the bold font weight in the system
+$font-weight-bold: 700 !default;
+
+/// Needed to be used whenever The default properties of a font are changed
+/// @param {Number} $size [] - The size of the desired font (=font-size)
+/// @param {Color} $color [$font-color] - The color of the desired font (=color).
+/// @param {Number} $weight [$font-weight-thin] - The weight of the font (=font-weight)
+/// @param {String} $family [$font-family] - The desired font face (=font-family)
+/// @example
+/// @include font-style(13px, $color-outer-space, 400, 'sans-serif')
+@mixin font-style($size:$font-base, $color:$color-main-text, $weight:$font-weight-normal, $family: $font-family) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}

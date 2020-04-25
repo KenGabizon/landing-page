@@ -1,0 +1,39 @@
+@import "colors";
+
+// Colors variables
+$color-main-text: $color-outer-space;
+$color-navigation-bar-text: $color-white !default;
+$color-toolbar-a: #1e3134;
+$color-toolbar-b: #305765;
+
+$color-ghost-white: $color-neutral-lighter!default;
+$color-gray-1: $color-neutral-light !default;
+$color-gray-2: $color-neutral-medium-dark !default;
+$color-gray-3: $color-neutral-dark !default;
+$color-gray-4: $color-neutral-darker !default;
+$color-gray-5: $color-neutral-darkest !default;
+
+$color-warning: $color-red !default;
+$color-success: $color-green !default;
+
+$button-default-font: #646464;
+$button-default-border: #c7c7c7;
+$button-selected-border: #5684e8;
+$button-default-background-border: #f9f9f9;
+$button-selected-background-border: #edf1fd;
+$button-unselected: #f9f9f9;
+
+$message-banner-info-bg: $tropical-blue !default;
+$message-banner-warning-bg: $golden-sand !default;
+$message-banner-error-bg: $rose-bud !default;
+$message-banner-success-bg: $granny-smith-apple !default;
+$message-banner-default-bg: $golden-sand !default;
+$message-banner-success-icon: $granny-smith-apple !default;
+$message-banner-text: $color-message-banner-text !default;
+
+$input-placeholder-text-color: $color-neutral-medium-light;
+$hoover-light-grey :$color-neutral-medium-light;
+$green-button: $color-green-button;
+
+// Other variables
+$toolbar-height: 60px !default;
