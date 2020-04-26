@@ -13,6 +13,7 @@
   @include font-style($font-xlarge, $color-navigation-bar-text, $font-weight-bold);
   background-image: linear-gradient(100deg, $color-navigation-bar-a 25%, $color-navigation-bar-b 100%);
   opacity: 0.9;
+  z-index: 9999;
   //height: 60px;
   //background-color: #1976d2;
 

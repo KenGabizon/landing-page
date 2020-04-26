@@ -1,0 +1,113 @@
+@import "./src/styles/colors";
+@import "./src/styles/variables";
+@import "./src/styles/fonts";
+
+//.home-page {
+//  display: flex;
+//  margin: 82px auto 32px;
+//  margin: $toolbar-height auto;
+//  padding: 0 16px;
+//  max-width: 960px;
+//  flex-direction: column;
+//  align-items: center;
+//}
+
+.home-page {
+  width: 100%;
+  height: 100%;
+
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+
+    /* Scroll Snap */
+    scroll-snap-align: center;
+  }
+}
+
+/* Sections */
+section#home {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .shadow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 45%;
+    opacity: 0.5;
+    background-color: $color-black;
+  }
+
+  .content-left {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+
+    .header {
+      font-style: italic;
+      @include font-style($font-name-title, $tropical-blue, $font-weight-thin);
+    }
+
+    .sub-header {
+      margin-top: 20px;
+      @include font-style($font-5xlarge, $tropical-blue, $font-weight-bold);
+    }
+  }
+
+  .right {
+    width: 50%;
+    @include font-style($font-large, $color-ghost-white, $font-weight-bold);
+  }
+}
+
+/* Section Images */
+section#home {
+  background: url('src/assets/code-double.png') no-repeat fixed center/cover;
+}
+
+section#bio {
+  background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;
+}
+
+section#skills {
+  background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
+}
+
+section#education {
+  background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;
+}
+
+section#experience {
+  background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;
+}
+
+section#contact {
+  background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;
+}
+
+
