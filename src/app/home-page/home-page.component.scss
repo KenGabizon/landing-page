@@ -35,6 +35,19 @@
   }
 }
 
+.shadow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  //width: 50%;
+  width: 45%;
+  opacity: 0.8;
+  background-color: $color-black;
+}
+
 /* Sections */
 section#home {
   position: relative;
@@ -44,22 +57,10 @@ section#home {
   justify-content: center;
   text-align: center;
 
-  .shadow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    //width: 50%;
-    width: 45%;
-    opacity: 0.8;
-    background-color: $color-black;
-  }
-
   .content-left {
     position: absolute;
-    top: 25%;
+    top: 10%;
+    //top: 25%;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -107,6 +108,46 @@ section#home {
   }
 }
 
+section#bio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .content-left {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    background-color: red;
+
+    .header {
+      font-style: italic;
+      @include font-style($font-name-title, $tropical-blue, $font-weight-medium);
+    }
+  }
+
+  .right {
+    width: 50%;
+
+    .content-right {
+      .profile-picture {
+        border-radius: 250px;
+        height: 50vh;
+        width: 50vh;
+      }
+    }
+  }
+}
+
 /* Section Backgrounds */
 section#home {
   background: url('src/assets/code-double.png') no-repeat fixed center/cover;
@@ -114,7 +155,8 @@ section#home {
 }
 
 section#bio {
-  background: url('src/assets/code.jpg') no-repeat center center/cover;
+  background: linear-gradient(100deg, $color-dark-blue 25%, $tropical-blue 100%) no-repeat fixed center/cover;
+  //background: linear-gradient(100deg, $color-dark-blue 25%, $tropical-blue 100%);
 }
 
 section#skills {
