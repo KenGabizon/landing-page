@@ -29,6 +29,11 @@
     margin: 0 64px 0 32px;
   }
 
+  a {
+    @include font-style($font-xlarge, $color-navigation-bar-text, $font-weight-bold);
+    text-decoration: none; /* no underline */
+  }
+
   .menu-item {
     margin: 0 16px;
     transition: 0.5s ease-out;
