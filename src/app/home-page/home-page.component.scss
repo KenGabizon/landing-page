@@ -51,6 +51,7 @@ section#home {
     justify-content: center;
     text-align: center;
     height: 100%;
+    //width: 50%;
     width: 45%;
     opacity: 0.5;
     background-color: $color-black;
@@ -74,40 +75,65 @@ section#home {
     }
 
     .sub-header {
-      margin-top: 20px;
+      margin: 20px 0;
       @include font-style($font-5xlarge, $tropical-blue, $font-weight-bold);
+    }
+
+    .buttons-container {
+      display: flex;
+      @include font-style($font-base, $color-black, $font-weight-medium);
+
+      .button {
+        //width: 50%;
+        margin: 10px;
+        padding: 15px 30px;
+        border: $color-dark-blue solid 5px;
+        border-radius: 100px;
+        //opacity: 0.9;
+        background-image: linear-gradient(100deg, $color-navigation-bar-a 25%, $color-navigation-bar-b 100%);
+        //background-color: $tropical-blue;
+      }
+
+      .icon {
+        transition: 0.5s ease-out;
+      }
+
+      .icon:hover {
+        transform: translateY(-0.4rem);
+        //opacity: 0.6;
+      }
     }
   }
 
   .right {
     width: 50%;
-    @include font-style($font-large, $color-ghost-white, $font-weight-bold);
   }
 }
 
 /* Section Images */
 section#home {
   background: url('src/assets/code-double.png') no-repeat fixed center/cover;
+  opacity: 0.9;
 }
 
 section#bio {
-  background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;
+  background: url('src/assets/code.jpg') no-repeat center center/cover;
 }
 
 section#skills {
-  background: url('https://source.unsplash.com/K2tdx2mFDHc/1600x900') no-repeat center center/cover;
+  background: url('src/assets/code-old.jpg') no-repeat center center/cover;
 }
 
 section#education {
-  background: url('https://source.unsplash.com/2aAHlfDOhJM/1600x900') no-repeat center center/cover;
+  background: url('src/assets/code-double.png') no-repeat center center/cover;
 }
 
 section#experience {
-  background: url('https://source.unsplash.com/bZZp1PmHI0E/1600x900') no-repeat center center/cover;
+  background: url('src/assets/code.jpg') no-repeat center center/cover;
 }
 
 section#contact {
-  background: url('https://source.unsplash.com/VRxo0yY-gyM/1600x900') no-repeat center center/cover;
+  background: url('src/assets/code-old.jpg') no-repeat center center/cover;
 }
 
 
