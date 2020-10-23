@@ -23,7 +23,7 @@ $font-xlarge: 15px;
 $font-xxLarge: 16px;
 
 //Represents a extra extra extra large size of a font in the system
-$font-3xlarge:18px;
+$font-3xlarge: 18px;
 
 /// Represents a super extra extra extra large size of a font in the system
 $font-4xlarge: 20px;
@@ -35,7 +35,10 @@ $font-5xlarge: 22px;
 $font-6xlarge: 25px;
 
 /// Represents a super extra extra extra large size of a font in the system
-$font-8xlarge-onb: 30px;
+$font-8xlarge: 30px;
+
+/// Represents a name title size of a font in the system
+$font-name-title: 72px;
 
 /// Represents the thin font weight in the system
 $font-weight-thin: 300 !default;
@@ -55,6 +58,9 @@ $font-weight-semi-bold: 600 !default;
 /// Represents the bold font weight in the system
 $font-weight-bold: 700 !default;
 
+/// Represents the extra bold font weight in the system
+$font-extra-weight-bold: 800 !default;
+
 /// Needed to be used whenever The default properties of a font are changed
 /// @param {Number} $size [] - The size of the desired font (=font-size)
 /// @param {Color} $color [$font-color] - The color of the desired font (=color).
@@ -62,9 +68,9 @@ $font-weight-bold: 700 !default;
 /// @param {String} $family [$font-family] - The desired font face (=font-family)
 /// @example
 /// @include font-style(13px, $color-outer-space, 400, 'sans-serif')
-@mixin font-style($size:$font-base, $color:$color-main-text, $weight:$font-weight-normal, $family: $font-family) {
-  font-family: $family;
+@mixin font-style($size: $font-base, $color: $color-main-text, $weight: $font-weight-normal, $family: $font-family) {
   font-size: $size;
   color: $color;
   font-weight: $weight;
+  font-family: $family;
 }

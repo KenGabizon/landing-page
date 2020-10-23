@@ -1,0 +1,178 @@
+@import "./src/styles/colors";
+@import "./src/styles/variables";
+@import "./src/styles/fonts";
+
+//.home-page {
+//  display: flex;
+//  margin: 82px auto 32px;
+//  margin: $toolbar-height auto;
+//  padding: 0 16px;
+//  max-width: 960px;
+//  flex-direction: column;
+//  align-items: center;
+//}
+
+.home-page {
+  width: 100%;
+  height: 100%;
+
+  /* CSS Smooth Scroll */
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+
+    /* Scroll Snap */
+    scroll-snap-align: center;
+  }
+}
+
+.shadow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  //width: 50%;
+  width: 45%;
+  opacity: 0.8;
+  background-color: $color-black;
+}
+
+/* Sections */
+section#home {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .content-left {
+    position: absolute;
+    top: 10%;
+    //top: 25%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+
+    .header {
+      font-style: italic;
+      @include font-style($font-name-title, $tropical-blue, $font-weight-medium);
+    }
+
+    .sub-header {
+      margin: 20px 0;
+      @include font-style($font-5xlarge, $tropical-blue, $font-weight-bold);
+    }
+
+    .buttons-container {
+      display: flex;
+      @include font-style($font-base, $color-black, $font-weight-medium);
+
+      .button {
+        //width: 50%;
+        margin: 10px;
+        padding: 15px 30px;
+        border: $color-dark-blue solid 5px;
+        border-radius: 100px;
+        background-image: linear-gradient(100deg, $color-navigation-bar-a 25%, $color-navigation-bar-b 100%);
+        //opacity: 0.9;
+        //background-color: $tropical-blue;
+        transition: 0.5s ease-out;
+      }
+
+      .button:hover {
+        transform: translateY(-0.4rem);
+        //opacity: 0.6;
+      }
+    }
+  }
+
+  .right {
+    width: 50%;
+  }
+}
+
+section#bio {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .content-left {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50%;
+    width: 50%;
+    background-color: red;
+
+    .header {
+      font-style: italic;
+      @include font-style($font-name-title, $tropical-blue, $font-weight-medium);
+    }
+  }
+
+  .right {
+    width: 50%;
+
+    .content-right {
+      .profile-picture {
+        border-radius: 250px;
+        height: 50vh;
+        width: 50vh;
+      }
+    }
+  }
+}
+
+/* Section Backgrounds */
+section#home {
+  background: url('src/assets/code-double.png') no-repeat fixed center/cover;
+  opacity: 0.9;
+}
+
+section#bio {
+  background: linear-gradient(100deg, $color-dark-blue 25%, $tropical-blue 100%) no-repeat fixed center/cover;
+  //background: linear-gradient(100deg, $color-dark-blue 25%, $tropical-blue 100%);
+}
+
+section#skills {
+  background: url('src/assets/code-old.jpg') no-repeat center center/cover;
+}
+
+section#education {
+  background: url('src/assets/code-double.png') no-repeat center center/cover;
+}
+
+section#experience {
+  background: url('src/assets/code.jpg') no-repeat center center/cover;
+}
+
+section#contact {
+  background: url('src/assets/code-old.jpg') no-repeat center center/cover;
+}
+
+
